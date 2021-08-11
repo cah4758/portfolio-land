@@ -20,8 +20,9 @@ body{
     display: flex;
     flex-direction: column;
     line-height: 1.4;
-    /* background-color: rgb(41, 111, 168); */
+    background-color: rgb(41, 111, 168);
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -41,24 +42,11 @@ nav ul {
 }
 
 main {
+    float: right;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
-}
-
-main #feature{
-    width: 550px;
-    margin: 10px;
-    padding: 3px;
-    background-color: red;
-}
-
-main section {
-    width: 200px;
-    margin: 10px;
-    padding: 3px;
-    background-color: red;
 }
 
 aside {
@@ -69,6 +57,28 @@ aside {
     background-color: grey;
     border-radius: 5px;
     box-shadow:9px 9px 10px black;
+}
+
+#feature-card,
+.am-container,
+.project-card {
+    width: 100%;
+    margin: 8px;
+}
+
+
+main section {
+    padding: 3px;
+    background-color: red;
+}
+
+main #feature-card{
+    padding: 3px;
+    background-color: red;
+}
+
+#project-1 {
+    background-color: chartreuse;
 }
 
 footer{
