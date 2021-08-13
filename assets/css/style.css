@@ -1,3 +1,10 @@
+:root {
+    --background: #161616;
+    --primary: #346751;
+    --secondary: #ECDBBA;
+    --accent: #C84B31;
+}
+
 * {
     font-family: 'Lora', serif;
     margin: 0;
@@ -19,8 +26,10 @@ p {
 body{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 2px;
     line-height: 1.4;
-    background-color: rgb(41, 111, 168);
+    background-color: var(--background);
 }
 
 header {
@@ -29,77 +38,82 @@ header {
     align-items: center;
     margin: 0;
     padding: 2%;
-    background-color: rgb(41, 111, 168);
+    background-color: var(--background);
     color: whitesmoke;
 }
 
-nav ul {
+header nav ul {
     display: flex;
-    justify-content: space-between;
-    min-width: 250px;
-    padding: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 100px;
     list-style-type: none;
 }
 
 main {
-    float: right;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
 }
 
-aside {
+.am-container,
+.card-container {
+    width: 100%;
+    margin: 5px 2px;
+    justify-content: center;
+}
+
+.am-card {
     height: fit-content;
-    width: 250px;
-    margin: 5px;
+    width: 98%;
     padding: 3px;
-    background-color: grey;
+    background-color: var(--primary);
     border-radius: 5px;
-    box-shadow:9px 9px 10px black;
+    box-shadow: 0px 5px 10px black;
 }
 
 #feature-card,
-.am-container,
 .project-card {
-    width: 100%;
-    margin: 8px;
+    height: fit-content;
+    width: 98%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 3px;
 }
-
 
 main section {
     padding: 3px;
-    background-color: red;
+    background-color: var(--secondary);
 }
 
 main #feature-card{
-    padding: 3px;
-    background-color: red;
+    background-color: var(--accent);
 }
 
-#project-1 {
+/* #project-1 {
     background-color: chartreuse;
-}
+} */
 
-footer{
+footer nav ul{
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-    background-color: grey;
-    color: whitesmoke;
+    list-style-type: none;
+    background-color: var(--accent);
+    color: var(--background);
 }
 
-@media screen and (max-width: 475px){
-    header nav ul {
+@media screen and (min-width: 768px){
+    .project-container {
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        min-width: 100px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    footer nav ul {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-    }
+    .project-card {
+        flex: 1 0 auto;
+        max-width: 46%;
+        margin: 10px;
+        }
 }
