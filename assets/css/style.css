@@ -138,10 +138,12 @@ footer nav ul{
         display: inline;
     }
     #hero {
-        width: 69%;
-        height: 200px;
-        display:block;
-        background-image: url(assets/images/hero.png);
+        height:200px;
+        width: 100%;
+        background-image: url("../images/hero.png");
+        background-position: center;
+        background-size: cover;
+        /* background-color:burlywood */
         }
     
     .float-left {
