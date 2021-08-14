@@ -14,7 +14,10 @@ a {
     font-family: 'Poppins', sans-serif;
     color: whitesmoke;
 }
-
+a:hover {
+    color:var(--accent);
+    text-decoration: underline overline;
+}
 h1 {
     font-size: 200%;
 }
@@ -70,7 +73,7 @@ main {
     padding: 3px;
     background-color: var(--primary);
     border-radius: 5px;
-    box-shadow: 0px 5px 10px black;
+    box-shadow: 0px 5px 10px var(--accent);
 }
 
 #feature-card,
@@ -83,7 +86,7 @@ main {
     padding: 3px;
 }
 
-main section {
+main .project-card {
     padding: 3px;
     background-color: var(--secondary);
 }
@@ -106,14 +109,50 @@ footer nav ul{
 }
 
 @media screen and (min-width: 768px){
+    /* moving into a grid layout for the smaller project cards at bigger screen sizes */
     .project-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 99%;
+        display: grid;
+        grid-template-columns: [first] auto [second] auto;
+        grid-template-rows: [first] 125px [second] 125px;
     }
-    .project-card {
-        flex: 1 0 auto;
-        max-width: 46%;
-        margin: 10px;
+    .project-card:nth-child(2n+1) {
+        width: 96%;
+        margin-left: 5px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    /* placing nav in a row */
+    header nav {
+        width: 50%;
+    }
+    header nav ul {
+        flex-direction: row;
+    }
+    header nav li {
+        width: 25%;
+    }
+    
+    main {
+        display: inline;
+    }
+    #hero {
+        width: 69%;
+        height: 200px;
+        display:block;
+        background-image: url(assets/images/hero.png);
         }
+    
+    .float-left {
+        width: 30%;
+        height: 75vw;
+        display: block;
+        float: left;
+    }
+    .card-container {
+        width: 69%;
+        display: block;
+        float: right;
+    }
 }
