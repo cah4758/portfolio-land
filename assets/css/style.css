@@ -16,7 +16,8 @@ a {
 }
 a:hover {
     color:var(--accent);
-    text-decoration: underline overline;
+    text-decoration: underline;
+    transition: .5s ease;
 }
 h1 {
     font-size: 200%;
@@ -70,7 +71,7 @@ main {
 .am-card {
     height: fit-content;
     width: 98%;
-    padding: 3px;
+    padding: 5px;
     background-color: var(--primary);
     border-radius: 5px;
     box-shadow: 0px 5px 10px var(--accent);
@@ -78,6 +79,7 @@ main {
 
 #feature-card,
 .project-card {
+    display: flex;
     height: fit-content;
     width: 98%;
     border-radius: 5px;
@@ -91,14 +93,47 @@ main .project-card {
     background-color: var(--secondary);
 }
 
-main #feature-card{
-    background-color: var(--accent);
+#feature-card {
+	height: 200px;
+	width: 100%;
+	max-width: 98%;
+	background-image: url(../images/horiseon-screenshot.png);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.feature-card-header,
+.feature-card-body {
+    padding-top: 50px;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--primary);
+  }
+
+#feature-card:hover .overlay{
+    opacity: 1;
+    box-shadow: 0 0 10px var(--accent);
 }
 
 /* #project-1 {
     background-color: chartreuse;
 } */
-
+footer {
+    position:static;
+    height: 30px;
+}
 footer nav ul{
     display: flex;
     flex-direction: row;
@@ -138,23 +173,29 @@ footer nav ul{
         display: inline;
     }
     #hero {
-        height:200px;
+        height: 300px;
         width: 100%;
+        /* margin-bottom: 25px; */
         background-image: url("../images/hero.png");
-        background-position: center;
         background-size: cover;
-        /* background-color:burlywood */
+        background-position: center;
         }
     
     .float-left {
-        width: 30%;
-        height: 75vw;
+        width: 40%;
+        height: 40vw;
         display: block;
         float: left;
     }
     .card-container {
-        width: 69%;
+        width: 58%;
         display: block;
         float: right;
+    }
+    footer {
+        padding: 30px;
+        clear: both;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        text-align: center;
     }
 }
