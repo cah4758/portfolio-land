@@ -1,6 +1,6 @@
 :root {
     --background: #161616;
-    --primary: #346751;
+    --primary: #397058;
     --secondary: #ECDBBA;
     --accent: #C84B31;
 }
@@ -15,7 +15,7 @@ a {
     color: whitesmoke;
 }
 a:hover {
-    color:var(--accent);
+    color:var(--secondary);
     text-decoration: underline;
     transition: .5s ease;
 }
@@ -80,6 +80,9 @@ main {
 #feature-card,
 .project-card {
     display: flex;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     height: fit-content;
     width: 98%;
     border-radius: 5px;
@@ -88,7 +91,7 @@ main {
     padding: 3px;
 }
 
-main .project-card {
+.project-card {
     padding: 3px;
     background-color: var(--secondary);
 }
@@ -127,12 +130,15 @@ main .project-card {
     box-shadow: 0 0 10px var(--accent);
 }
 
-/* #project-1 {
-    background-color: chartreuse;
+/* Cookie-Jar, Finger Chart, Caddie
+#project-1 {
+    background-image;
 } */
+
 footer {
     position:static;
     height: 30px;
+    width: 100%;
 }
 footer nav ul{
     display: flex;
@@ -172,30 +178,24 @@ footer nav ul{
     main {
         display: inline;
     }
+    /* Look into maybe 4 separate images with some :hover app */
     #hero {
         height: 300px;
         width: 100%;
-        /* margin-bottom: 25px; */
         background-image: url("../images/hero.png");
         background-size: cover;
         background-position: center;
         }
-    
+    /* About me moves left, feature big to right, and other projects in a grid underneath */
     .float-left {
-        width: 40%;
-        height: 40vw;
         display: block;
+        width: 40%;
+        height: 35vw;
         float: left;
     }
     .card-container {
-        width: 58%;
         display: block;
+        width: 58%;
         float: right;
-    }
-    footer {
-        padding: 30px;
-        clear: both;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-align: center;
     }
 }
