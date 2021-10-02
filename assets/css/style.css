@@ -8,6 +8,7 @@
 * {
     font-family: 'Lora', serif;
     margin: 0;
+    color: var(--secondary);
 }
 
 a {
@@ -15,7 +16,7 @@ a {
     color: whitesmoke;
 }
 a:hover {
-    color:var(--secondary);
+    color:var(--accent);
     text-decoration: underline;
     transition: .5s ease;
 }
@@ -36,24 +37,6 @@ body{
     background-color: var(--background);
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 2%;
-    background-color: var(--background);
-    color: whitesmoke;
-}
-
-header nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    min-width: 100px;
-    list-style-type: none;
-}
-
 main {
     display: flex;
     flex-wrap: wrap;
@@ -61,141 +44,20 @@ main {
     justify-content: center;
 }
 
-.am-container,
-.card-container {
-    width: 100%;
-    margin: 5px 2px;
-    justify-content: center;
+.divider {
+    margin: 20px;
+}
+.card-image
+.responsive-img {
+    max-height: 50px;
+    opacity: 80%;
 }
 
-.am-card {
-    height: fit-content;
-    width: 98%;
-    padding: 5px;
+span, .card-title{
+    background-color: var(--background);
+}
+
+.card-content {
     background-color: var(--primary);
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px var(--accent);
 }
 
-#feature-card,
-.project-card {
-    display: flex;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    height: fit-content;
-    width: 98%;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 3px;
-}
-
-.project-card {
-    padding: 3px;
-    background-color: var(--secondary);
-}
-
-#feature-card {
-	height: 200px;
-	width: 100%;
-	max-width: 98%;
-	background-image: url(../images/horiseon-screenshot.png);
-	position: relative;
-	display: flex;
-	flex-direction: column;
-}
-
-.feature-card-header,
-.feature-card-body {
-    padding-top: 50px;
-    text-align: center;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: var(--primary);
-  }
-
-#feature-card:hover .overlay{
-    opacity: 1;
-    box-shadow: 0 0 10px var(--accent);
-}
-
-/* Cookie-Jar, Finger Chart, Caddie
-#project-1 {
-    background-image;
-} */
-
-footer {
-    position:static;
-    height: 30px;
-    width: 100%;
-}
-footer nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    list-style-type: none;
-    background-color: var(--accent);
-    color: var(--background);
-}
-
-@media screen and (min-width: 768px){
-    /* moving into a grid layout for the smaller project cards at bigger screen sizes */
-    .project-container {
-        width: 99%;
-        display: grid;
-        grid-template-columns: [first] auto [second] auto;
-        grid-template-rows: [first] 125px [second] 125px;
-    }
-    .project-card:nth-child(2n+1) {
-        width: 96%;
-        margin-left: 5px;
-    }
-}
-
-@media screen and (min-width: 992px){
-    /* placing nav in a row */
-    header nav {
-        width: 50%;
-    }
-    header nav ul {
-        flex-direction: row;
-    }
-    header nav li {
-        width: 25%;
-    }
-    
-    main {
-        display: inline;
-    }
-    /* Look into maybe 4 separate images with some :hover app */
-    #hero {
-        height: 300px;
-        width: 100%;
-        background-image: url("../images/hero.png");
-        background-size: cover;
-        background-position: center;
-        }
-    /* About me moves left, feature big to right, and other projects in a grid underneath */
-    .float-left {
-        display: block;
-        width: 40%;
-        height: 35vw;
-        float: left;
-    }
-    .card-container {
-        display: block;
-        width: 58%;
-        float: right;
-    }
-}
