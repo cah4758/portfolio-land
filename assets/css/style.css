@@ -1,63 +1,65 @@
 :root {
-    --background: #161616;
-    --primary: #397058;
-    --secondary: #ECDBBA;
-    --accent: #C84B31;
+  --background: #161616;
+  --primary: #397058;
+  --secondary: #ecdbba;
+  --accent: #c84b31;
 }
 
 * {
-    font-family: 'Lora', serif;
-    margin: 0;
-    color: var(--secondary);
+  font-family: "Lora", serif;
+  margin: 0;
+  color: var(--secondary);
 }
 
 a {
-    font-family: 'Poppins', sans-serif;
-    color: whitesmoke;
+  font-family: "Poppins", sans-serif;
+  color: whitesmoke;
 }
 a:hover {
-    color:var(--accent);
-    text-decoration: underline;
-    transition: .5s ease;
+  color: var(--accent);
+  text-decoration: underline;
+  transition: 0.5s ease;
+}
+.sidenav li > a {
+  color: whitesmoke;
 }
 h1 {
-    font-size: 200%;
+  font-size: 200%;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2px;
-    line-height: 1.4;
-    background-color: var(--background);
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2px;
+  line-height: 1.4;
+  background-color: var(--background);
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .divider {
-    margin: 20px;
+  margin: 20px;
 }
-.card-image
-.responsive-img {
-    max-height: 50px;
-    opacity: 80%;
+.card-image .responsive-img {
+  max-height: 50px;
+  opacity: 80%;
 }
 
-span, .card-title{
-    background-color: var(--background);
+span,
+.card-title {
+  background-color: var(--background);
 }
 
 .card-content {
-    background-color: var(--primary);
+  background-color: var(--primary);
 }
-
