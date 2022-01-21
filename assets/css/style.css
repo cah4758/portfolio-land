@@ -37,7 +37,6 @@ body {
   width: 100%;
   padding: 2px;
   line-height: 1.4;
-  background-color: var(--background);
 }
 
 main {
@@ -47,9 +46,6 @@ main {
   justify-content: center;
 }
 
-.divider {
-  margin: 20px;
-}
 .card-image .responsive-img {
   max-height: 50px;
   opacity: 80%;
